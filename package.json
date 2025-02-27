@@ -1,0 +1,31 @@
+{
+  "name": "frontend-vue-lara_10_v1",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chart.js": "3.3.2",
+    "primeflex": "^3.2.1",
+    "primeicons": "^6.0.1",
+    "primevue": "3.28.0", 
+
+
+    "axios": "^1.7.9",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+
+    "sass": "^1.55.0",
+
+    "vite": "^6.1.0",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  }
+}
