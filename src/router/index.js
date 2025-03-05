@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VistaLogin from '../views/LoginView.vue'
 import AppLayout  from '@/layout/AppLayout.vue'
+import Empresa from '@/views/admin/Empresa.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-
     
     {
       path: '/login',
@@ -36,6 +36,13 @@ const router = createRouter({
           component: () => import('../views/AboutView.vue'),
           meta: { requireAuth: true }
         },
+        {
+          path:'empresa',
+          name: 'Empresa',
+          component:Empresa,
+          meta: { requireAuth: true },
+          //meta: { redirectIfAuth: true }
+        }
 
       ]
     }
@@ -53,7 +60,7 @@ router.beforeEach((to, from, next) => {
   }
 
   if (to.meta.redirectIfAuth && token) {
-    return next({ name: 'about' })
+    return next({ name: 'about'})
   }
 
   return next()
