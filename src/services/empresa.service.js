@@ -8,7 +8,7 @@ export default{
         return http().post("/empresa", datos);
     },
     mostrar(id){
-        return http().get("/empresa"+id);
+        return http().get("/empresa/"+id);
     },
     modificar(datos, id){
         return http().put("/empresa/"+id, datos);

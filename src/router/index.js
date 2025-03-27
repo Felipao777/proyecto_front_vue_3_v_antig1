@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import VistaLogin from '../views/LoginView.vue'
 import AppLayout  from '@/layout/AppLayout.vue'
 import Empresa from '@/views/admin/Empresa.vue'
+import Trabajador_hab from '@/views/admin/Trabajador_hab.vue'
+import NuevoAsmt from '@/views/admin/asmt/NuevoAsmt.vue'
+import ListaAsmt from '@/views/admin/asmt/ListaAsmt.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +43,27 @@ const router = createRouter({
           path:'empresa',
           name: 'Empresa',
           component:Empresa,
+          meta: { requireAuth: true },
+          //meta: { redirectIfAuth: true }
+        },
+        {
+          path:'trabajador',
+          name: 'Trabajador',
+          component:Trabajador_hab,
+          meta: { requireAuth: true },
+          //meta: { redirectIfAuth: true }
+        },
+        {
+          path:'asmt/nuevo',
+          name: 'AsmtNuevo',
+          component:NuevoAsmt,
+          meta: { requireAuth: true },
+          //meta: { redirectIfAuth: true }
+        },
+        {
+          path:'asmt',
+          name: 'AsmtLista',
+          component:ListaAsmt,
           meta: { requireAuth: true },
           //meta: { redirectIfAuth: true }
         }

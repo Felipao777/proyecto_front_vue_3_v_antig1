@@ -7,161 +7,92 @@ const model = ref([
     {
         label: 'Administración',
         items: [{ label: 'Admin', icon: 'pi pi-fw pi-home', to: '/' },
-        { label: 'perfil', icon: 'pi pi-fw pi-user', to: '/about' }        ]
+        { label: 'perfil', icon: 'pi pi-fw pi-user', to: '/about' }]
     },
     {
-        label: 'Gestión Permisos',
+        label: 'Gestión Registros',
         items: [
-            { label: 'Empresa', icon: 'pi pi-fw pi-id-card', to: 'empresa' },
-            { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
-            { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
-            { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', to: '/uikit/invalidstate' },
-            { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
-            { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
-            { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
-            { label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/uikit/tree' },
-            { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panel' },
-            { label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/uikit/overlay' },
-            { label: 'Media', icon: 'pi pi-fw pi-image', to: '/uikit/media' },
-            { label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/uikit/menu', preventExact: true },
-            { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
-            { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
-            { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
-            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
+            { label: 'Empresa', icon: 'pi pi-fw pi-check-square', to: '/empresa' },
+            { label: 'Trabajadores', icon: 'pi pi-fw pi-id-card', to: '/trabajador' },
+
+
         ]
     },
     {
-        label: 'Prime Blocks',
+        label: 'Permisos de Trabajo',
         items: [
-            { label: 'Free Blocks', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: 'NEW' },
-            { label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: 'https://www.primefaces.org/primeblocks-vue', target: '_blank' }
+            { label: 'Asmt', icon: 'pi pi-fw pi-eye', to: '/asmt' },
+            { label: 'NuevoAsmt', icon: 'pi pi-fw pi-eye', to: '/asmt/nuevo' },
+            { label: 'Trab Alturas', icon: 'pi pi-fw pi-globe', url: 'https://www.primefaces.org/primeblocks-vue', target: '_blank' },
+            { label: 'Trab Caliente', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: 'NEW' },
+            { label: 'Trab E.Confinados', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: 'NEW' },
         ]
     },
+
     {
-        label: 'Utilities',
+        label: 'Gestión de Riesgos', icon: 'pi pi-fw pi-briefcase', to: '/pages',
         items: [
-            { label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', to: '/utilities/icons' },
-            { label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: 'https://www.primefaces.org/primeflex/', target: '_blank' }
-        ]
-    },
-    {
-        label: 'Pages',
-        icon: 'pi pi-fw pi-briefcase',
-        to: '/pages',
-        items: [
-            {
-                label: 'Landing',
-                icon: 'pi pi-fw pi-globe',
-                to: '/landing'
-            },
-            {
-                label: 'Auth',
-                icon: 'pi pi-fw pi-user',
+            { label: 'Tipo de Riesgos', icon: 'pi pi-fw pi-globe', to: '/landing' },
+            {   label: 'Medidas de Riesgos', icon: 'pi pi-fw pi-eye',
                 items: [
-                    {
-                        label: 'Login',
-                        icon: 'pi pi-fw pi-sign-in',
-                        to: '/auth/login'
-                    },
-                    {
-                        label: 'Error',
-                        icon: 'pi pi-fw pi-times-circle',
-                        to: '/auth/error'
-                    },
-                    {
-                        label: 'Access Denied',
-                        icon: 'pi pi-fw pi-lock',
-                        to: '/auth/access'
-                    }
+                    { label: 'ASMT',icon: 'pi pi-fw pi-sign-in', to: '/auth/login' },
+                    { label: 'Alturas', icon: 'pi pi-fw pi-times-circle', to: '/auth/error'},
+                    { label: 'Caliente',icon: 'pi pi-fw pi-lock', to: '/auth/access'},
+                    { label: 'Confinados',icon: 'pi pi-fw pi-lock', to: '/auth/access'}
                 ]
-            },
-            {
-                label: 'Crud',
-                icon: 'pi pi-fw pi-pencil',
-                to: '/pages/crud'
-            },
-            {
-                label: 'Timeline',
-                icon: 'pi pi-fw pi-calendar',
-                to: '/pages/timeline'
-            },
-            {
-                label: 'Not Found',
-                icon: 'pi pi-fw pi-exclamation-circle',
-                to: '/pages/notfound'
-            },
-            {
-                label: 'Empty',
-                icon: 'pi pi-fw pi-circle-off',
-                to: '/pages/empty'
-            }
+            },            
         ]
     },
+
     {
-        label: 'Hierarchy',
+        label: 'GESTION DE EPPS', icon: 'pi pi-fw pi-briefcase', to: '/pages',
         items: [
-            {
-                label: 'Submenu 1',
-                icon: 'pi pi-fw pi-bookmark',
+            { label: 'Epps', icon: 'pi pi-fw pi-globe', to: '/landing' },
+            {   label: 'Epps asignados', icon: 'pi pi-fw pi-eye',
                 items: [
-                    {
-                        label: 'Submenu 1.1',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-                            { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                            { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' }
-                        ]
-                    },
-                    {
-                        label: 'Submenu 1.2',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [{ label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }]
-                    }
+                    { label: 'Epps ASMT',icon: 'pi pi-fw pi-sign-in', to: '/auth/login' },
+                    { label: 'Epps Alturas', icon: 'pi pi-fw pi-times-circle', to: '/auth/error'},
+                    { label: 'Epps Caliente',icon: 'pi pi-fw pi-lock', to: '/auth/access'},
+                    { label: 'Epps Confinados',icon: 'pi pi-fw pi-lock', to: '/auth/access'}
                 ]
-            },
-            {
-                label: 'Submenu 2',
-                icon: 'pi pi-fw pi-bookmark',
-                items: [
-                    {
-                        label: 'Submenu 2.1',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                            { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' }
-                        ]
-                    },
-                    {
-                        label: 'Submenu 2.2',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
-                    }
-                ]
-            }
+            },            
         ]
     },
+
     {
-        label: 'Get Started',
+        label: 'ASPECTOS A VERIFICAR', icon: 'pi pi-fw pi-briefcase', to: '/pages',
         items: [
-            {
-                label: 'Documentation',
-                icon: 'pi pi-fw pi-question',
-                to: '/documentation'
-            },
-            {
-                label: 'View Source',
-                icon: 'pi pi-fw pi-search',
-                url: 'https://github.com/primefaces/sakai-vue',
-                target: '_blank'
-            },
-            {
-                label: 'Nuxt Version',
-                url: 'https://github.com/primefaces/sakai-nuxt',
-                icon: 'pi pi-fw pi-star'
-            }
+            { label: 'Area de Asp verif', icon: 'pi pi-fw pi-globe', to: '/landing' },
+            {   label: 'Asp verif', icon: 'pi pi-fw pi-eye',
+                items: [
+                    { label: 'Asp verif ASMT',icon: 'pi pi-fw pi-sign-in', to: '/auth/login' },
+                    { label: 'Asp verif Alturas', icon: 'pi pi-fw pi-times-circle', to: '/auth/error'},
+                    { label: 'Asp verif Caliente',icon: 'pi pi-fw pi-lock', to: '/auth/access'},
+                    { label: 'Asp verif Confinados',icon: 'pi pi-fw pi-lock', to: '/auth/access'}
+                ]
+            }, 
+            {   label: 'Asp cierre', icon: 'pi pi-fw pi-eye',
+                items: [
+                    { label: 'Asp cierre ASMT',icon: 'pi pi-fw pi-sign-in', to: '/auth/login' },
+                    { label: 'Asp cierre Alturas', icon: 'pi pi-fw pi-times-circle', to: '/auth/error'},
+                    { label: 'Asp cierre Caliente',icon: 'pi pi-fw pi-lock', to: '/auth/access'},
+                    { label: 'Asp cierre Confinados',icon: 'pi pi-fw pi-lock', to: '/auth/access'}
+                ]
+            },            
         ]
-    }
+    },
+
+
+    {
+        label: 'GESTION DE AREAS-SECTORES',
+        items: [
+            { label: 'Areas', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
+            { label: 'Sectores', icon: 'pi pi-fw pi-desktop', to: '/utilities/icons' },
+            // { label: 'Maquinarias', icon: 'pi pi-fw pi-desktop', url: 'https://www.primefaces.org/primeflex/', target: '_blank' }
+            { label: 'Maquinarias', icon: 'pi pi-fw pi-prime', to: '/uikit/floatlabel' }
+        ]
+    },
+
 ]);
 </script>
 
@@ -171,11 +102,7 @@ const model = ref([
             <app-menu-item v-if="!item.separator" :item="item" :index="i"></app-menu-item>
             <li v-if="item.separator" class="menu-separator"></li>
         </template>
-        <li>
-            <a href="https://www.primefaces.org/primeblocks-vue/#/" target="_blank">
-                <img src="/layout/images/banner-primeblocks.png" alt="Prime Blocks" class="w-full mt-3" />
-            </a>
-        </li>
+
     </ul>
 </template>
 
